@@ -1,0 +1,606 @@
+@import "bourbon"
+@import "fonts"
+@import "libs"
+@import "vars"
+@import "../libs/fontello/fontello.css"
+
+*::-webkit-input-placeholder
+	color: $text-color
+
+*:-moz-placeholder
+	color: $text-color
+
+*::-moz-placeholder
+	color: $text-color
+
+*:-ms-input-placeholder
+	color: $text-color
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: $text-color
+
+body input:required:valid,
+body textarea:required:valid
+	color: $text-color
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 20em
+	position: relative
+	line-height: 1.75
+	font-family: $raleway-regular
+	overflow-x: hidden
+
+.img-responsive
+	display: block
+	width: 100%
+	height: 100%
+
+.p50
+	padding-top: 50px
+
+.m0
+	margin: 0!important
+
+.p0
+	padding: 0!important
+
+*:focus
+	outline: none
+
+h1
+	font-family: $montserrat-bold
+	font-size: 2.8125em
+	letter-spacing: 2px
+
+h2 
+	font-family: $montserrat-bold
+	font-size: 2.375em
+	letter-spacing: 2px
+
+h3 
+	font-family: $merriweather-bold
+	font-size: 1.125em
+	letter-spacing: 2.5px
+	margin: 0
+
+h4 
+	font-family: $merriweather-bold
+	font-size: 1.25em
+	color: rgb(39, 39, 39)
+
+h5
+	font-family: $merriweather-bold
+	font-size: 1.25em
+	color: rgba(255, 255, 255, .95)
+	text-transform: uppercase
+
+.block-top
+	padding-top: 110px
+	text-align: center
+	text-transform: uppercase
+	padding-bottom: 100px
+
+.top-heading
+	margin-bottom: 10px
+
+.top-alternative
+	font-family: $merriweather-regular
+	font-size: 1.125em 
+	color: rgba(0, 0, 0, 0.62)
+	line-height: 28px
+	letter-spacing: 1px
+
+/*Header block*/
+.header 
+	background-color: rgba(239, 240, 242, 0.99)
+	&__logo
+		width: 100%
+		font-family: $montserrat-bold
+		&-link
+			display: inline-block
+			text-align: center
+			text-decoration: none
+			text-transform: uppercase
+			width: 112px
+			letter-spacing: 1.3px
+			border: 6px solid rgb(23, 15, 28)
+			&:hover, &:focus
+				text-decoration: none
+		&-span
+			font-size: 1.06em
+			color: rgb(0, 0, 0)
+			text-shadow: 0 1px 2.5px rgba(21, 21, 22, 0.75)
+		&-object
+			font-size: 1.3em
+			margin: -5.3px
+			color: rgb(119, 239, 229)
+	&__nav
+		max-height: 0
+		position: relative
+		overflow: hidden
+		&-dropdown
+			z-index: 999
+			cursor: pointer
+			display: inline-block
+			position: fixed
+			font-size: 2.2em
+			top: 45px
+			right: 4%
+			border-radius: 5px
+			text-decoration: none
+		&-icon 
+			cursor: pointer
+			color: rgba(0, 0, 0, 0.6)
+			width: 32px
+			padding: 8px 8px
+			line-height: 30px
+			height: 32px
+			&:active, &:focus
+				background: rgba(139,137,135, 0.25)
+				border-radius: 50%
+		&-list
+			display: none
+			list-style: none
+			z-index: 1000
+			position: fixed
+			width: 220px
+			top: 80px
+			right: 5%
+			margin-top: 28px
+			padding: 0
+			text-transform: uppercase
+			background-color: rgb(119, 239, 229)
+			border: 1.5px solid rgba(0, 0, 0, 0.3)
+			border-radius: 10px 
+		&-item 
+			border-bottom: 1px solid rgba(0, 0, 0, 0.3)
+			&:last-child
+				border-bottom: 0
+		&-link 
+			display: block
+			font-size: 1.2em
+			padding: 0 21px
+			color: rgba(0, 0, 0, 0.5)
+    		transition: 0.4s	
+			&:hover, &:focus
+				text-decoration: none
+				color: rgb(0, 0, 0)
+	&__hello
+		text-align: center
+		line-height: 30px	
+		&-article 
+			display: inline-block
+			padding-left: 15px
+			color: #505050
+			text-shadow: 3.5px 8.3px 10px rgba(0, 0, 0, 0.24)
+			text-transform: uppercase
+			padding-top: 240px
+		&-span 
+			display: inline-block
+			padding: 13px 10px
+			background-color: rgba(118, 244, 234, 0.5)
+	&__button
+		text-align: center
+		padding: 111px 0 5px 0
+		&-btn 
+			border-radius: 2px
+			background-color: rgba(239, 240, 242, 0.99)
+			border: 2px solid rgba(0, 0, 0, 0.5)
+			color: rgba(0, 0, 0, 0.75)
+			text-align: center
+			font-size: 1.125em
+			text-transform: uppercase
+			letter-spacing: 2.2px
+			padding: 10px 45px
+			width: 232px
+  		cursor: pointer
+  		outline: none
+			&:hover, &:focus
+				outline: 3px inset rgba(118, 244, 234, 0.5)
+				-webkit-transition: 0.2s ease-in
+				transition: 0.2s ease-in
+				color: rgba(0, 0, 0, 0.5)
+				background: rgba(118, 244, 234, 0.8)
+			&:active
+				outline: 3px outset rgba(118, 244, 234, 0.5)
+				-webkit-transition: 0.2s ease-out
+				transition: 0.2s ease-out
+				color: rgba(0, 0, 0, 0.75)
+		&-text 
+			cursor: pointer
+  		display: inline-block
+	&__image
+		position: relative
+		width: 190px
+		padding-bottom: 137px
+	&__cork
+		display:block
+		z-index: 1
+		padding-left: 22px
+		margin-top: -9px
+	&__glass
+		display:block
+		position: absolute
+		z-index: 2 
+		left: 17px
+		top: -36px
+/*End of Header block*/
+
+/*About us block*/
+.about
+	background-color: rgba(248, 250, 250, 0.99)
+	&__content
+		width: 100%
+		padding-bottom: 114px
+	&__slider 
+		position: relative
+		box-sizing: border-box
+		&-item 
+			width: 391px
+			height: 483px
+			box-shadow: 0 0 30px rgba(20, 20, 21, 0.13)
+		&-img 
+			display: none
+			padding-left: 75px
+			padding-bottom: 44px
+			&:active 
+				display: block
+			&.scroll 
+				@include slider-moove
+		&-prev, &-next 
+			@include switch-element
+			width: 40px
+			height: 414px
+			top: 5%
+			left: 35px
+			margin-top: 8px
+			&:hover
+				background-color: rgb(227, 229, 232)
+		&-next 
+			left: 466px
+		&-dot 
+			@include switch
+			&:hover, &.active 
+				cursor: pointer
+				background-color: $main-color
+		&-dots 
+			padding-left: 240px
+	&__work 
+		width: 100%
+		&-heading 
+			color: rgba(0, 0, 0, 0.75)
+			text-transform: uppercase
+		&-analiz 
+			color: rgba(0, 0, 0, 0.74)
+			letter-spacing: 0.8px
+			padding-bottom: 20px
+/*End of About block*/
+
+/*Featured block*/
+.featured
+	&__gallery
+		margin-bottom: 50px
+		&-item
+			width: 340px
+			height: 340px
+			margin: 0 auto
+/*End of Featured block*/
+
+/*Service block*/
+.service
+	background-color: rgba(248, 250, 250, 0.99)
+	&__gallery
+		position: relative
+		margin-bottom: 30px
+		&:hover &-wrap
+			opacity: 1
+		&-wrap
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-color: rgba(0, 0, 0, .6)
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			opacity: 0
+		&-text
+			font-family: $raleway-regular
+			color: rgb(255, 255, 255)
+			text-align: left
+			padding: 0 70px
+			margin: auto
+		&-image
+			height: 370px
+			margin: 0 auto
+		&-last
+			margin-bottom: 100px	
+/*Contact-Block*/
+
+/*Team Block*/
+.team
+	&__gallery 
+		margin-bottom: 30px
+		position: relative
+		&:hover	&-tooltip
+			visibility: visible
+			opacity: 1
+		&-tooltip 
+			visibility: hidden
+			width: 295px
+			height: 228px
+			background-color: rgb(119, 239, 229)
+			color: #fff
+			text-align: center
+			padding: 0 10px
+			box-shadow: 2.7px 6.4px 16px rgba(20, 20, 21, 0.18)
+			position: absolute
+			z-index: 999
+			bottom: 4.5%
+			left: 26%
+			margin-left: -60px
+			opacity: 0
+			-webkit-transition: opacity 1s
+			transition: opacity 1s
+			&::after 
+				content: " "
+				position: absolute
+				bottom: 100%
+				left: 6%
+				margin-left: -5px
+				border-width: 10px
+				border-style: solid
+				border-color: rgb(119, 239, 229) transparent transparent transparent
+				-webkit-transform: rotateX( 180deg )
+				transform: rotateX( 180deg )
+		&-span
+			display: inline-block
+			color: rgb(118, 112, 112)
+			font-size: 0.9375em
+			font-family: $merriweather-regular
+			font-style: italic
+		&-text 
+			opacity: 0.8
+			color: rgb(0, 0, 0)
+			line-height: 24px
+		&-icons 
+			margin-top: 25px
+		&-link
+			display: inline-block
+			color: rgba(0, 0, 0, 0.7)
+			margin-right: 8px
+			&:hover
+				color: rgb(0, 0, 0)
+		&-last
+			margin-bottom: 100px
+/*End of Team block*/
+
+/*Says block*/
+.says
+	background-color: rgba(248, 250, 250, 0.99)
+	&__content
+		width: 100%
+		padding-bottom: 114px
+	&__slider 
+		position: relative
+		box-sizing: border-box;
+		&-item 
+			width: 320px
+			height: 410px
+			box-shadow: 0 0 30px rgba(20, 20, 21, 0.13)
+		&-img 
+			display: none
+			padding-left: 38px
+			padding-bottom: 50px
+			&:active 
+				display: block
+			&.scroll 
+				@include slider-moove
+		&-biography
+			position: absolute
+			z-index: 1
+			width: 100%
+			text-align: center
+			top: 80px
+			left: 130%
+			&:active 
+				display: block
+		&-toolspan
+			font-size: 0.9375em
+			font-style: italic
+			color: rgb(120, 120, 120)
+		&-tooltext
+			color: rgba(0, 0, 0, .7)
+		&-star
+			color: rgb(242, 218, 59)
+		&-stars
+			color: rgb(255, 255, 255)
+		&-prev, &-next 
+			@include switch-element
+			width: 38px
+			height: 362px
+			top: 4%
+			left: 0
+			margin-top: 4px
+			&:hover
+				background-color: rgb(227, 229, 232)
+		&-next 
+			left: 358px
+		&-dis
+			@include switch
+			&:hover, &.active 
+				cursor: pointer
+				background-color: $main-color
+		&-disk 
+			padding-left: 173px
+	&__biography
+		width: 100%
+		padding-top: 23px
+		width: 666px
+		&-img
+			height: 362px
+		&-btn
+			margin-top: 25px
+			text-align: right
+		&-left
+			margin-right: 30px
+		&-left, &-right
+			display: inline-block
+			text-align: center
+			line-height: 53px
+			width: 53px
+			height: 53px
+			background-color: rgb(255, 255, 255)
+			color: rgba(0, 0, 0, 0.3)
+			border-radius: 3px
+			box-shadow: 3.1px 7.4px 11px rgba(20, 20, 21, 0.05)
+			font-size: 1.25em
+			&:hover, &:focus, &:active
+				box-shadow: 2.3px 5.5px 11px rgba(20, 20, 21, 0.1)
+				background-color: $main-color
+				color: rgba(0, 0, 0, 0.67)
+				outline: none
+/*End of Says block*/
+
+/*Logotips block*/
+.logotips
+	&__first
+		@include logotip
+		margin: 150px 0 40px
+	&__second
+		@include logotip
+		margin: 0 0 150px
+/*End of Logotips block*/
+
+/*Contact block*/
+.contact
+	background: url('../img/contact-bg.png') no-repeat center center
+	background-size: cover
+	padding-top: 200px
+	padding-bottom: 125px
+	&__form
+		width: 100%
+		font-family: $raleway-regular
+		font-size: 0.9375em
+		color: $text-color
+		background-color: rgba(2, 22, 35, 0.71)
+		box-shadow: 0 0 30px rgba(21, 21, 21, 0.12)
+		&-list
+			list-style-type: none
+			list-style-position: outside
+			margin: 0
+			padding: 17px 30px
+		&-item 
+			padding: 17px 15px 15px 0
+			border-bottom: 1px solid $text-color
+			position: relative
+			&:last-child 
+				border-bottom: none
+		&-label
+			display: inline-block
+			width: 16.2866%
+			margin-top: 5px
+			float: left
+		&-input
+			height: 30px	
+			width: 70%
+			padding: 2px 8px
+			border: 1px solid transparent
+			background: transparent
+			&:focus
+				background: transparent
+				border: 1px solid #555
+				box-shadow: 0 0 3px #aaa	
+		&-textarea
+			padding: 8px
+			width: 70%
+			border: 1px solid transparent
+			background: transparent
+			&:focus
+				background: transparent
+				border: 1px solid #555
+				box-shadow: 0 0 3px #aaa
+		&-submit
+			width: 42%
+			height: 53px
+			border-sizing: border-box
+			background-color: rgb(110, 238, 228)
+			border: 1px solid rgb(110, 238, 228)
+			border-radius: 2px
+			color: rgba(0, 0, 0, 0.7)
+			font-family: $montserrat-bold
+			font-size: 1.125em
+			text-transform: uppercase;
+			padding: 7px 20px
+			text-align: center
+			&:hover
+				opacity: 0.5
+				cursor: pointer
+	&__address
+		width: 100%
+		font-family: $raleway-regular
+		font-size: 0.9375em
+		color: $text-color
+		background-color: rgba(2, 22, 35, 0.71)
+		box-shadow: 0 0 30px rgba(21, 21, 21, 0.12)
+		&-info
+			display: block
+			width: 91.4%
+			padding-top: 14px
+			padding-left: 30px
+		&-map
+			display: block
+			width: 95.4%	
+			height: 230px
+			padding-left: 22px
+			padding-bottom: 19px
+			border: none
+/*End of Contact block*/
+
+/*Footer block*/
+.footer 
+	background-color: rgb(38, 43, 46)
+	&__follow
+		color: rgba(255, 255, 255, 0.8)
+		font-family: $raleway-medium
+		text-transform: uppercase
+		text-align: center
+		padding-top: 90px
+	&__down
+		box-sizing: border-box
+		margin: auto
+		height: 40px
+		width: 210px
+	&__item
+		float: left
+		width: 45px
+		height: 40px
+		margin-right: 5px
+		line-height: 44px
+		font-size: 1.5em
+		text-align: center
+		background-color: rgb(138, 138, 138)
+		cursor: pointer
+		&:hover, &:focus
+			background-color: $main-color
+	&__link
+		color: rgb(250, 244, 244)
+		&:hover
+			color: rgb(0, 0, 0)
+	&__copyright 
+		font-family: $raleway-medium
+		color: rgba(255, 255, 255, 0.4)
+		text-align: center
+		padding-top: 20px
+		padding-bottom: 93px
+/*End of Footer block*/
+
+@import "media" // Всегда в конце

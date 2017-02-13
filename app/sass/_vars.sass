@@ -1,0 +1,50 @@
+@import "bourbon"
+
+$raleway-regular: "raleway-regular"
+$raleway-medium: "raleway-medium"
+$montserrat-regular: "montserrat-regular"
+$montserrat-bold: "montserrat-bold"
+$merriweather-regular: "merriweather-regular"
+$merriweather-bold: "merriweather-bold"
+
+$main-color: rgb(113, 246, 235)
+$text-color: rgba(255, 255, 255, 0.6)
+
+@-webkit-keyframes scroll 
+  from {opacity: .2} 
+  to {opacity: 1}
+
+@keyframes scroll 
+  from {opacity: .2} 
+  to {opacity: 1}
+
+@mixin slider-moove
+	-webkit-animation-name: scroll 
+	-webkit-animation-duration: 0.5s
+	animation-name: scroll
+	animation-duration: 0.5s
+
+@mixin logotip
+	display: inline-block
+	height: 59px
+	line-height: 59px
+	text-align: center
+	-webkit-filter: grayscale(100%)
+	filter: grayscale(100%)
+
+@mixin switch
+	height: 10px
+	width: 10px
+	margin: 0 2px
+	background-color: rgb(208, 208, 208)
+	border-radius: 3px
+	display: inline-block
+	-webkit-transition: background-color 0.6s ease
+	transition: background-color 0.6s ease
+
+@mixin switch-element
+	cursor: pointer
+	position: absolute
+	background-color: rgb(239, 240, 242)
+	-webkit-transition: 0.6s ease
+	transition: 0.6s ease
